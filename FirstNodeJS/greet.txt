@@ -1,0 +1,4 @@
+Hello Mr. noargs
+Hello Mr. noargs
+Hello ! undefined
+Hello ! noargs
