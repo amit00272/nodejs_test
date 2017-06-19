@@ -5,4 +5,8 @@ var person={
 var person1={
     name:"RAvi"
 };
-console.log(person);
+
+debugger;
+person.age =27;
+person1.age=26;
+

@@ -1,4 +1,4 @@
-console.log("Start App");
+
 
 const fs= require("fs");
 const os =require("os");
@@ -16,8 +16,27 @@ fs.appendFile("greet.txt",str);
 //console.log(notes.add(10,20));
 //console.log(_.isString("true"));
 
+const titleOptions={
 
-const argv=yargs.argv;
+                    describe:'title of the note',
+                    demand:true,
+                    alias:'t'
+                  };
+
+const bodyOptions={
+
+                    describe:'body of the note',
+                    demand:false,
+                    alias:'b'
+                 };
+const argv=yargs
+           .command('add',"Add a new note",{title:titleOptions, body:bodyOptions})
+           .command('get',"Get a indivisual note",{title:titleOptions})
+           .command('list',"List all Notes")
+           .command('remove',"Remove a note",{title:titleOptions,})
+           .help()
+           .argv;
+
 var command = argv._[0];
 
 if(command ===  'add'){
@@ -45,7 +64,9 @@ if(command ===  'add'){
 
 }else if(command ===  'list'){
 
-    notes.getAllNotes();
+    var notesAr=notes.getAllNotes();
+    console.log(`Printing ${notesAr.length} number of notes`);
+    notesAr.forEach(notes.logNote);
 
 }else  if(command ===  'remove'){
 

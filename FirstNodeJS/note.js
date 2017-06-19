@@ -76,7 +76,7 @@ var getNotes=(title)=>{
 
 var getAllNotes = () =>{
 
-    console.log("Getting All notes");
+    return fetchnotes();
 }
 
 var removeNote = (title) =>{
@@ -84,4 +84,13 @@ var removeNote = (title) =>{
     return deletenotes(title);
 }
 
-module.exports = {adNotes ,getAllNotes,removeNote,getNotes};
+var logNote=(note)=>{
+
+console.log("-----------------");
+console.log(`Title=${note.title}`);
+console.log(`Body=${note.body}`);
+console.log("-------------------");
+
+};
+
+module.exports = {adNotes ,getAllNotes,removeNote,getNotes,logNote};
