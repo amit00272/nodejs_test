@@ -11,6 +11,8 @@ var square =(x)=>{
 */
 var square=x=> x*x;
 
+
+
 var user={
     name:'Amit',
     sayHi:()=>{
@@ -18,6 +20,7 @@ var user={
         console.log(`hi,I am ${this.name}`);//this is not work here
     },
     sayHiAlt(){
+
         console.log(arguments);
         console.log(`hi,I am ${this.name}`);
 
@@ -25,4 +28,8 @@ var user={
 
 };
 
-user.sayHi(1,2,3);
+var test=10;
+
+
+//user.sayHi(1,2,3);
+//console.log(square(9));

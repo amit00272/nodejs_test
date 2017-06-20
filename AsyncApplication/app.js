@@ -4,7 +4,7 @@
 
 const yargs=require('yargs');
 const geocode=require('./geocode/geocode');
-const request=require('request');
+const weather=require('./weather/weather');
 
 
 
@@ -30,19 +30,12 @@ geocode.getAddress(argv.address,(errorMessage,result)=>{
         console.log(errorMessage);
     }else{
 
-        request({
+     console.log(`Address:-${result.address}`) ;
+     weather.getWeather(result.latitude,result.longitude,(error,result)=>{
 
-            url:`https://api.darksky.net/forecast/a2ab26682544561d850b73c7abb1dab6/${result.latitude},${result.longitude}`,
-            json:true
+          console.log(`Temperature is ${result.temperature}`);
 
-        },(error, response, data)=> {
-
-            if (error) return;
-            console.log(JSON.stringify(data.currently.temperature,undefined,10));
-
-            //console.log(data);
-        });
-
+    });
 
 
     }
