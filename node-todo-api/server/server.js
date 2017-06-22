@@ -19,11 +19,23 @@ app.post('/todos',(req,res)=>{
     todo.save().then((data)=>{
 
         console.log("Data inserted");
-        res.sendStatus(200).send('1');
+         res.send(data);
     },(e)=>{
 
         res.status(400).send(e);
     })
+});
+
+
+app.get('/todos',(req,res)=>{
+
+Todo.find().then((doc)=>{
+    res.send({doc});
+
+},(e)=>{
+res.sendStatus(400).send(e);
+});
+
 });
 
 app.listen(3000,()=>{
@@ -33,4 +45,4 @@ app.listen(3000,()=>{
 
 
 
-
+module.exports={app};
