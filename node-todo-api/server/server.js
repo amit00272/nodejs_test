@@ -5,15 +5,25 @@ var {mongoose}=require('./db/db');
 var {Todo}=require('./models/todo');
 var {User}=require('./models/user');
 
-
 var app=express();
 
 app.use(bodyParser.json());
-//app.post('',(req,res)=>{})
 
+//app.post('',(req,res)=>{})
 app.post('/todos',(req,res)=>{
 
+    var todo =new Todo({
+        text:req.body.text
+    });
 
+    todo.save().then((data)=>{
+
+        console.log("Data inserted");
+        res.sendStatus(200).send('1');
+    },(e)=>{
+
+        res.status(400).send(e);
+    })
 });
 
 app.listen(3000,()=>{
