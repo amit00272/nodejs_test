@@ -15,7 +15,7 @@ app.post('/todos',(req,res)=>{
     var todo =new Todo({
         text:req.body.text
     });
-    
+
     todo.save().then((data)=>{
 
         console.log("Data inserted");
@@ -29,8 +29,8 @@ app.post('/todos',(req,res)=>{
 
 app.get('/todos',(req,res)=>{
 
-Todo.find().then((doc)=>{
-    res.send({doc});
+Todo.find().then((todos)=>{
+    res.send({todos});
 
 },(e)=>{
 res.sendStatus(400).send(e);
