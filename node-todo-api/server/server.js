@@ -9,8 +9,6 @@ if(env === 'development'){
 
     process.env.PORT=3000;
     process.env.MONGODB_URI='mongodb://localhost:27017/TodoApptest'
-
-
 }
 
 
@@ -120,6 +118,28 @@ app.patch('/todos/:id', (req, res) => {
         })
         .catch((error)=>res.sendStatus(400).send({error}));
 
+
+});
+
+
+
+app.post('/users',(req,res)=>{
+
+
+    var body=_.pick(req.body,['email','password']);
+    var user=new User(body);
+
+
+
+    user.save().then((user)=>{
+
+        return user.generateAuthToken();
+
+    }).then((token)=>{
+
+        res.header('x-auth',token).send(user);
+
+    }).catch((error)=>res.send(error));
 
 });
 
