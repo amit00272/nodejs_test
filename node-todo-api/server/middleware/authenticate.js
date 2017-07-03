@@ -3,6 +3,9 @@
  */
 
 var {User}=require('./../models/user');
+const bcrypt=require('bcryptjs');
+
+
 
 var authenticate = (req,res,next)=>{
 
@@ -26,5 +29,35 @@ var authenticate = (req,res,next)=>{
     });
 };
 
-module.exports={authenticate};
+
+var loginAuthenticate=(req,res,next)=>{
+
+    var email=req.body.email;
+    var password=req.body.password;
+
+    User.findOne({email}).then(user=>{
+
+                 if(!user)
+                    return Promise.reject();
+
+                 if(bcrypt.compare(password,user.password)) {
+                     req.user = user;
+                     next();
+                 }else{
+
+                     return Promise.reject();
+
+                 }
+
+            }).catch((e)=>{
+
+                res.sendStatus(401);
+
+    });
+
+
+
+}
+
+module.exports={authenticate,loginAuthenticate};
 
