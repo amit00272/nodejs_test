@@ -1,6 +1,3 @@
-/**
- * Created by noargs on 22/06/17.
- */
 
 const expect=require('expect');
 const request =require('supertest');
@@ -20,6 +17,7 @@ describe('POST /todos',()=>{
        var text="Test todo text";
        request(app)
            .post('/todos')
+           .set('x-auth',users[0].tokens[0].token)
            .send({text})
            .expect(200)
            .expect((res)=>{
@@ -49,6 +47,7 @@ describe('POST /todos',()=>{
 
         request(app)
             .post('/todos')
+            .set('x-auth',users[0].tokens[0].token)
             .send()
             .expect(400)
             .end((err,res)=>{
@@ -72,12 +71,18 @@ describe('POST /todos',()=>{
 describe('Get /todos',()=>{
 
    it('should get all todos',(done)=>{
-       request(app).get('/todos').expect(200)
+       request(app)
+                .get('/todos')
+                .set('x-auth',users[0].tokens[0].token)
+                .expect(200)
            .expect((res)=>{
-                    expect(res.body.todos.length).toBe(2);
+                    expect(res.body.todos.length).toBe(1);
            }).end(done);
 
    });
+
+
+
 });
 
 
@@ -87,14 +92,19 @@ describe('Get /todos',()=>{
     it('Should take only valid object',(done)=>{
 
         request(app).get('/todos/123')
+            .set('x-auth',users[0].tokens[0].token)
                     .expect(404)
                     .end(done);
 
     });
 
+
+
+
     it('Should take empty object if there is nothing with this id',(done)=>{
 
         request(app).get('/todos/594cbc976abf5a06055e3238')
+            .set('x-auth',users[0].tokens[0].token)
                     .expect(404)
                     .end(done);
 
@@ -104,10 +114,22 @@ describe('Get /todos',()=>{
     it('Should take valid object with  id',(done)=>{
 
         request(app).get(`/todos/${todos[0]._id.toHexString()}`)
+            .set('x-auth',users[0].tokens[0].token)
             .expect(200)
             .expect(res=>{
                  expect(res.body.todo.text).toBe(todos[0].text);
             }).end(done);
+
+    });
+
+
+    it('Should Not return todo doc created by other users',(done)=>{
+
+        request(app)
+            .get(`/todos/${todos[1]._id.toHexString()}`)
+            .set('x-auth',users[0].tokens[0].token)
+            .expect(404)
+            .end(done);
 
     });
 });
@@ -115,9 +137,10 @@ describe('Get /todos',()=>{
 
 describe("Delete /todo/:id",()=>{
 
-    it('Shoul delete only valid object',(done)=>{
+    it('Should delete only valid object',(done)=>{
 
         request(app).get('/todos/delete/123')
+            .set('x-auth',users[0].tokens[0].token)
             .expect(404)
             .end(done);
 
@@ -126,6 +149,7 @@ describe("Delete /todo/:id",()=>{
     it('Should return 404 if object not found',(done)=>{
 
         request(app).get('/todos/delete/594cbc976abf5a06055e3238')
+            .set('x-auth',users[0].tokens[0].token)
             .expect(404)
             .end(done);
 
@@ -134,26 +158,37 @@ describe("Delete /todo/:id",()=>{
 
     it('Should Delete valid object with  id',(done)=>{
 
-        request(app).get(`/todos/delete/${todos[0]._id.toHexString()}`)
+        request(app).get(`/todos/delete/${todos[1]._id.toHexString()}`)
+            .set('x-auth',users[1].tokens[0].token)
             .expect(200)
             .expect(res=>{
-                expect(res.body.todo.text).toBe(todos[0].text);
+                expect(res.body.todo.text).toBe(todos[1].text);
             }).end(done);
 
     });
 
+
+    it('Should Delete valid object with  id',(done)=>{
+
+        request(app).get(`/todos/delete/${todos[0]._id.toHexString()}`)
+            .set('x-auth',users[1].tokens[0].token)
+            .expect(404)
+            .end(done);
+
+    });
 
 });
 
 
 describe("Patch /todos/:id",()=>{
 
-    it('Shoul Update to do',(done)=>{
+    it('Should Update to do',(done)=>{
 
         var hexID=todos[0]._id.toHexString();
         var text='This should be the new text';
 
         request(app).patch(`/todos/${hexID}`)
+                    .set('x-auth',users[0].tokens[0].token)
                     .send({completed:true,text})
                     .expect(200)
                     .expect(res=>{
@@ -166,12 +201,27 @@ describe("Patch /todos/:id",()=>{
 
     });
 
+
+    it('Should Update to do from the user who is created',(done)=>{
+
+        var hexID=todos[0]._id.toHexString();
+        var text='This should be the new text';
+
+        request(app).patch(`/todos/${hexID}`)
+            .set('x-auth',users[1].tokens[0].token)
+            .send({completed:false,text})
+            .expect(404)
+            .end(done);
+
+    });
+
     it('Should clear completed At wehen todo is not completed ',(done)=>{
 
         var hexID=todos[1]._id.toHexString();
         var text='This should be the new text!!';
 
         request(app).patch(`/todos/${hexID}`)
+            .set('x-auth',users[1].tokens[0].token)
             .send({completed:false,text})
             .expect(200)
             .expect(res=>{
@@ -314,7 +364,7 @@ describe('POST users/login',()=>{
 
                 User.findById(users[1]._id).then((user)=>{
 
-                    expect(user.tokens[0]).toInclude({
+                    expect(user.tokens[1]).toInclude({
 
                         access:'auth',
                         token:res.headers['x-auth']
@@ -350,6 +400,55 @@ describe('POST users/login',()=>{
 
                 User.findById(users[1]._id).then((user)=>{
 
+                    expect(user.tokens.length).toBe(1);
+                    done();
+
+                }).catch((e)=>done(e));
+
+            });
+
+    });
+
+
+});
+
+
+describe('DELETE /users/me/token', () => {
+    it('should remove auth token on logout', (done) => {
+        request(app)
+            .delete('/users/me/token')
+            .set('x-auth', users[0].tokens[0].token)
+            .expect(200)
+            .end((err, res) => {
+                if (err) {
+                    return done(err);
+                }
+
+                User.findById(users[0]._id).then((user) => {
+                    expect(user.tokens.length).toBe(0);
+                    done();
+                }).catch((e) => done(e));
+            });
+    });
+});
+
+/*
+
+describe('DELETE users/me/token',()=>{
+
+    it('Should remove auth token on logout ',(done)=>{
+
+        request(app)
+            .delete('users/me/token')
+            .set('x-auth',users[0].tokens[0].token)
+            .expect(200)
+            .end((err,res)=>{
+
+                if(err)
+                    return done(err);
+
+                User.findById(users[0]._id).then((user)=>{
+
                     expect(user.tokens.length).toBe(0);
                     done();
 
@@ -361,3 +460,4 @@ describe('POST users/login',()=>{
 
 
 });
+    */
