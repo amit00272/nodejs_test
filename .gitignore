@@ -4,3 +4,6 @@ web-server/node_modules/
 web-server/server.log
 node-test/node_modules/
 node-todo-api/node_modules/
+node-todo-api/server/config/config.json
+async-await/node_modules/
+yarntest/node_modules
