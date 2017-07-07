@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="5eb74fe4-4b5c-4ff5-8a7c-e2ff6dcc322b" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/session_cokies/ReadMe.md" afterPath="$PROJECT_DIR$/session_cokies/ReadMe.md" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -462,7 +461,7 @@
       <workItem from="1499334502548" duration="5000" />
       <workItem from="1499334577477" duration="1282000" />
       <workItem from="1499340874196" duration="1628000" />
-      <workItem from="1499404402213" duration="3722000" />
+      <workItem from="1499404402213" duration="3776000" />
     </task>
     <task id="LOCAL-00001" summary="First Commit after first program">
       <created>1496556666040</created>
@@ -496,7 +495,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="124195000" />
+    <option name="totallyTimeSpent" value="124249000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
