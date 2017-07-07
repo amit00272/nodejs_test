@@ -1,0 +1,14 @@
+{
+  "name": "session_cokies",
+  "version": "0.0.1",
+  "description": "This to test Session and cokies",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "AmitKumar",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.15.3"
+  }
+}

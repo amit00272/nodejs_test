@@ -84,7 +84,7 @@ const convertCurrencyAlt = async (from,to,amount) =>{
 };
 
 
-convertCurrencyAlt('INR','USD',800).then((rate)=>{
+convertCurrencyAlt('CAD','INR',1).then((rate)=>{
 
    console.log(rate);
 
