@@ -1,8 +1,8 @@
-##Security Instructions For NodeJs Application
+<h2>Security Instructions For NodeJs Application</h2>
 
-###Use TLS (Transport Layer Security)
+<h3>Use TLS (Transport Layer Security)</h3>
   * We can Use Free class 1 certificates to implements Https from [StartSSL]('http://www.startssl.com/')
-###Cookies Should be Secure
+<h3>Cookies Should be Secure</h3>
    * Http Only
     `res.cookie('sessionid', '1', { httpOnly: true });`
    * Secure 
@@ -13,7 +13,7 @@
      `res.cookie('sessionid', '1', { path : `foo/bar` });`
    * Expire
       `res.cookie('sessionid', '1', { expires : expiryDate });`
-###Set HTTP headers appropriately
+<h3>Set HTTP headers appropriately</h3>
    * Install Package like Helmet
      `$ npm install --save helmet`
    * Use this to manage and hide your <b>headers</b> like <b>x-powered-by</b>  
@@ -28,7 +28,7 @@
    * <b>X-Content-Type-Options</b>prevents browsers from MIME-sniffing a response away from the declared content-type
    * <b>Content-Security-Policy</b>prevents a wide range of attacks, including Cross-site scripting and other cross-site injections
    
-###Ensure Your dependencies are secure   
+ <h3>Ensure Your dependencies are secure  </h3> 
   * By instating <b>NSP(Node Security Project)</b> and using .We can check our dependency.<br> 
    `$ npm i nsp -g`<br>
    `$ nsp check`<br>
@@ -37,7 +37,7 @@
    `$ snyk test`<br>
    `$ snyk wizard`<br>
    
-###Authentication for Brute Force Protection
+<h3> Authentication for Brute Force Protection</h3> 
    * To prevent your application from these kind of attacks .We can use [RateLimiter]('https://www.npmjs.com/package/ratelimiter')  
      ````javascript
      var limit = new Limiter({ id: email, db: db });
@@ -46,9 +46,9 @@
      
      });
      ````    
-###Secure Session Management
+<h3> Secure Session Management</h3> 
   * You can use `express-session` package for the same.
-###Command Injection 
+<h3> Command Injection </h3> 
   * User can inject command like:-
   ````javascript
   https://example.com/downloads?file=user1.txt
@@ -57,12 +57,12 @@
   * To prevent command injection you should always filter and sanitize user input.
   
   
-###Secure Data Transmission
+<h3> Secure Data Transmission</h3> 
  * Check the followiing
    - SSL Version
    - Algorithms
    - Key length
-###Regular Expression
+<h3> Regular Expression </h3> 
  * Evil like regular expression which contains:-
    - Grouping With repeation
    - Inside the repeated group
@@ -71,14 +71,14 @@
       `([a-zA-Z]+)*, (a+)+ or (a|a?)+`
       
       
-###Error Handling
+<h3> Error Handling</h3> 
    - Dont Show server side Error codes and stack traces.
    
-###SQL Injection
+<h3> SQL Injection</h3> 
   * Stop Injection like :-
     `select title, author from books where id=2 or 1=1`
    
-###CSRF (Cross-Site Request Forgery) 
+<h3> CSRF (Cross-Site Request Forgery)</h3>  
   * It is an attack that forces a user to execute unwanted actions on a web application in which they're currently logged in. These attacks specifically target state-changing requests, not theft of data, since the attacker has no way to see the response to the forged request.
   
   * In Node.js to mitigate this kind of attacks you can use the csrf module. As it is quite low-level, there are wrappers for different frameworks as well.
@@ -86,6 +86,7 @@
   * One example for this is the [csurf](https://www.npmjs.com/package/csurf) module: an express middleware for CSRF protection.
   
   ````javascript 1.8
+  
   var cookieParser = require('cookie-parser');  
   var csrf = require('csurf');  
   var bodyParser = require('body-parser');  

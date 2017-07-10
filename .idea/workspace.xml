@@ -2,11 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5eb74fe4-4b5c-4ff5-8a7c-e2ff6dcc322b" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Security Implemetation/ReadMe.md" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/session_cokies/package-lock.json" afterPath="$PROJECT_DIR$/session_cokies/package-lock.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/session_cokies/package.json" afterPath="$PROJECT_DIR$/session_cokies/package.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/session_cokies/server.js" afterPath="$PROJECT_DIR$/session_cokies/server.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Security Implemetation/ReadMe.md" afterPath="$PROJECT_DIR$/Security Implemetation/ReadMe.md" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -27,16 +24,16 @@
       <file leaf-file-name="ReadMe.md" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Security Implemetation/ReadMe.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-            <state split_layout="SECOND">
-              <first_editor relative-caret-position="328">
-                <caret line="122" column="10" lean-forward="true" selection-start-line="122" selection-start-column="10" selection-end-line="122" selection-end-column="10" />
+            <state split_layout="FIRST">
+              <first_editor relative-caret-position="218">
+                <caret line="88" column="2" lean-forward="false" selection-start-line="88" selection-start-column="2" selection-end-line="88" selection-end-column="2" />
                 <folding>
-                  <marker date="1499680282000" expanded="true" signature="2185:2199" ph="{...}" />
-                  <marker date="1499680282000" expanded="true" signature="4238:4340" ph="{...}" />
-                  <marker date="1499680282000" expanded="true" signature="4415:4463" ph="{...}" />
-                  <marker date="1499680282000" expanded="true" signature="4559:4776" ph="&lt;form/&gt;" />
-                  <marker date="1499680282000" expanded="true" signature="4604:4766" ph="&lt;input/&gt;" />
-                  <marker date="1499680282000" expanded="true" signature="4684:4766" ph="&lt;input/&gt;" />
+                  <marker date="1499680700000" expanded="true" signature="2225:2239" ph="{...}" />
+                  <marker date="1499680700000" expanded="true" signature="4338:4440" ph="{...}" />
+                  <marker date="1499680700000" expanded="true" signature="4515:4563" ph="{...}" />
+                  <marker date="1499680700000" expanded="true" signature="4659:4876" ph="&lt;form/&gt;" />
+                  <marker date="1499680700000" expanded="true" signature="4704:4866" ph="&lt;input/&gt;" />
+                  <marker date="1499680700000" expanded="true" signature="4784:4866" ph="&lt;input/&gt;" />
                 </folding>
               </first_editor>
               <second_editor />
@@ -143,10 +140,9 @@
     <handled-path value="$PROJECT_DIR$/yarntest/node_modules" />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="705" />
     <option name="y" value="23" />
-    <option name="width" value="574" />
-    <option name="height" value="716" />
+    <option name="width" value="1280" />
+    <option name="height" value="717" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
@@ -417,7 +413,7 @@
       <workItem from="1499665791022" duration="5473000" />
       <workItem from="1499673169531" duration="14000" />
       <workItem from="1499673563054" duration="334000" />
-      <workItem from="1499674945828" duration="4845000" />
+      <workItem from="1499674945828" duration="5193000" />
     </task>
     <task id="LOCAL-00001" summary="First Commit after first program">
       <created>1496556666040</created>
@@ -451,7 +447,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="136758000" />
+    <option name="totallyTimeSpent" value="137106000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -463,16 +459,16 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="705" y="23" width="574" height="716" extended-state="0" />
+    <frame x="0" y="23" width="1280" height="717" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.60108304" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21484375" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32921174" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.35548687" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.35493827" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -878,16 +874,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Security Implemetation/ReadMe.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SECOND">
-          <first_editor relative-caret-position="328">
-            <caret line="122" column="10" lean-forward="true" selection-start-line="122" selection-start-column="10" selection-end-line="122" selection-end-column="10" />
+        <state split_layout="FIRST">
+          <first_editor relative-caret-position="218">
+            <caret line="88" column="2" lean-forward="false" selection-start-line="88" selection-start-column="2" selection-end-line="88" selection-end-column="2" />
             <folding>
-              <marker date="1499680282000" expanded="true" signature="2185:2199" ph="{...}" />
-              <marker date="1499680282000" expanded="true" signature="4238:4340" ph="{...}" />
-              <marker date="1499680282000" expanded="true" signature="4415:4463" ph="{...}" />
-              <marker date="1499680282000" expanded="true" signature="4559:4776" ph="&lt;form/&gt;" />
-              <marker date="1499680282000" expanded="true" signature="4604:4766" ph="&lt;input/&gt;" />
-              <marker date="1499680282000" expanded="true" signature="4684:4766" ph="&lt;input/&gt;" />
+              <marker date="1499680700000" expanded="true" signature="2225:2239" ph="{...}" />
+              <marker date="1499680700000" expanded="true" signature="4338:4440" ph="{...}" />
+              <marker date="1499680700000" expanded="true" signature="4515:4563" ph="{...}" />
+              <marker date="1499680700000" expanded="true" signature="4659:4876" ph="&lt;form/&gt;" />
+              <marker date="1499680700000" expanded="true" signature="4704:4866" ph="&lt;input/&gt;" />
+              <marker date="1499680700000" expanded="true" signature="4784:4866" ph="&lt;input/&gt;" />
             </folding>
           </first_editor>
           <second_editor />
