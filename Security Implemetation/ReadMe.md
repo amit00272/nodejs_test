@@ -2,6 +2,7 @@
 
 <h3>Use TLS (Transport Layer Security)</h3>
   * We can Use Free class 1 certificates to implements Https from [StartSSL]('http://www.startssl.com/')
+
 <h3>Cookies Should be Secure</h3>
    * Http Only
           ````res.cookie('sessionid', '1', { httpOnly: true }); ````
@@ -47,8 +48,10 @@
      
      });
      ````    
+
 <h3> Secure Session Management</h3> 
   * You can use `express-session` package for the same.
+
 <h3> Command Injection </h3> 
   * User can inject command like:-
   ````javascript
@@ -63,6 +66,7 @@
    - SSL Version
    - Algorithms
    - Key length
+
 <h3> Regular Expression </h3> 
  * Evil like regular expression which contains:-
    - Grouping With repeation
@@ -87,7 +91,6 @@
   * One example for this is the [csurf](https://www.npmjs.com/package/csurf) module: an express middleware for CSRF protection.
   
   ````javascript
-  
   var cookieParser = require('cookie-parser');  
   var csrf = require('csurf');  
   var bodyParser = require('body-parser');  
