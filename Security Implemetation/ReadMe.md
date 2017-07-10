@@ -119,7 +119,7 @@
   
   And on the view Layer you have do something like :-
   
-  ````javascript 1.8
+  ````javascript
   <form action="/process" method="POST">  
     <input type="hidden" name="_csrf" value="{{csrfToken}}">
   
