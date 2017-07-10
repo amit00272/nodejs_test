@@ -9,6 +9,7 @@
   "author": "AmitKumar",
   "license": "MIT",
   "dependencies": {
+    "cookie-parser": "^1.4.3",
     "express": "^4.15.3"
   }
 }

@@ -1,0 +1,17 @@
+{
+  "name": "mailtest",
+  "version": "1.0.0",
+  "description": "This package will use to send mail.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Amit Kumar",
+  "license": "MIT",
+  "keywords": [
+    "Mailer"
+  ],
+  "dependencies": {
+    "nodemailer": "^4.0.1"
+  }
+}
