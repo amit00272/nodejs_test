@@ -4,7 +4,7 @@
   * We can Use Free class 1 certificates to implements Https from [StartSSL]('http://www.startssl.com/')
 <h3>Cookies Should be Secure</h3>
    * Http Only
-    `res.cookie('sessionid', '1', { httpOnly: true });`
+          ````res.cookie('sessionid', '1', { httpOnly: true }); ````
    * Secure 
     `res.cookie('sessionid', '1', { secure: true });`  
    * Domain
@@ -13,6 +13,7 @@
      `res.cookie('sessionid', '1', { path : `foo/bar` });`
    * Expire
       `res.cookie('sessionid', '1', { expires : expiryDate });`
+      
 <h3>Set HTTP headers appropriately</h3>
    * Install Package like Helmet
      `$ npm install --save helmet`
@@ -85,7 +86,7 @@
   
   * One example for this is the [csurf](https://www.npmjs.com/package/csurf) module: an express middleware for CSRF protection.
   
-  ````javascript 1.8
+  ````javascript
   
   var cookieParser = require('cookie-parser');  
   var csrf = require('csurf');  

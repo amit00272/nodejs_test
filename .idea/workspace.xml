@@ -24,16 +24,16 @@
       <file leaf-file-name="ReadMe.md" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Security Implemetation/ReadMe.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-            <state split_layout="FIRST">
-              <first_editor relative-caret-position="218">
-                <caret line="88" column="2" lean-forward="false" selection-start-line="88" selection-start-column="2" selection-end-line="88" selection-end-column="2" />
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="74">
+                <caret line="6" column="68" lean-forward="false" selection-start-line="6" selection-start-column="68" selection-end-line="6" selection-end-column="68" />
                 <folding>
-                  <marker date="1499680700000" expanded="true" signature="2225:2239" ph="{...}" />
-                  <marker date="1499680700000" expanded="true" signature="4338:4440" ph="{...}" />
-                  <marker date="1499680700000" expanded="true" signature="4515:4563" ph="{...}" />
-                  <marker date="1499680700000" expanded="true" signature="4659:4876" ph="&lt;form/&gt;" />
-                  <marker date="1499680700000" expanded="true" signature="4704:4866" ph="&lt;input/&gt;" />
-                  <marker date="1499680700000" expanded="true" signature="4784:4866" ph="&lt;input/&gt;" />
+                  <marker date="1499680918000" expanded="true" signature="2245:2259" ph="{...}" />
+                  <marker date="1499680918000" expanded="true" signature="4354:4456" ph="{...}" />
+                  <marker date="1499680918000" expanded="true" signature="4531:4579" ph="{...}" />
+                  <marker date="1499680918000" expanded="true" signature="4675:4892" ph="&lt;form/&gt;" />
+                  <marker date="1499680918000" expanded="true" signature="4720:4882" ph="&lt;input/&gt;" />
+                  <marker date="1499680918000" expanded="true" signature="4800:4882" ph="&lt;input/&gt;" />
                 </folding>
               </first_editor>
               <second_editor />
@@ -413,7 +413,7 @@
       <workItem from="1499665791022" duration="5473000" />
       <workItem from="1499673169531" duration="14000" />
       <workItem from="1499673563054" duration="334000" />
-      <workItem from="1499674945828" duration="5193000" />
+      <workItem from="1499674945828" duration="5368000" />
     </task>
     <task id="LOCAL-00001" summary="First Commit after first program">
       <created>1496556666040</created>
@@ -447,7 +447,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="137106000" />
+    <option name="totallyTimeSpent" value="137281000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -874,16 +874,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Security Implemetation/ReadMe.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="FIRST">
-          <first_editor relative-caret-position="218">
-            <caret line="88" column="2" lean-forward="false" selection-start-line="88" selection-start-column="2" selection-end-line="88" selection-end-column="2" />
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="74">
+            <caret line="6" column="68" lean-forward="false" selection-start-line="6" selection-start-column="68" selection-end-line="6" selection-end-column="68" />
             <folding>
-              <marker date="1499680700000" expanded="true" signature="2225:2239" ph="{...}" />
-              <marker date="1499680700000" expanded="true" signature="4338:4440" ph="{...}" />
-              <marker date="1499680700000" expanded="true" signature="4515:4563" ph="{...}" />
-              <marker date="1499680700000" expanded="true" signature="4659:4876" ph="&lt;form/&gt;" />
-              <marker date="1499680700000" expanded="true" signature="4704:4866" ph="&lt;input/&gt;" />
-              <marker date="1499680700000" expanded="true" signature="4784:4866" ph="&lt;input/&gt;" />
+              <marker date="1499680918000" expanded="true" signature="2245:2259" ph="{...}" />
+              <marker date="1499680918000" expanded="true" signature="4354:4456" ph="{...}" />
+              <marker date="1499680918000" expanded="true" signature="4531:4579" ph="{...}" />
+              <marker date="1499680918000" expanded="true" signature="4675:4892" ph="&lt;form/&gt;" />
+              <marker date="1499680918000" expanded="true" signature="4720:4882" ph="&lt;input/&gt;" />
+              <marker date="1499680918000" expanded="true" signature="4800:4882" ph="&lt;input/&gt;" />
             </folding>
           </first_editor>
           <second_editor />
