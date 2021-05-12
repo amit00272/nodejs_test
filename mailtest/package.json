@@ -12,6 +12,6 @@
     "Mailer"
   ],
   "dependencies": {
-    "nodemailer": "^4.0.1"
+    "nodemailer": "^6.4.16"
   }
 }
